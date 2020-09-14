@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <style>
+            form {
+              position: relative;
+              width: 150px;
+              margin: 0 auto;
+            }
+            .d1{
+                float: right;
+                line-height: 67px;
+            }
+            .d1 input {
+              width: 100px;
+              height: 30px;
+              border: 2px solid darkred;
+              border-radius: 5px;
+              outline: none;
+              background: white;
+              color: #1e242a;
+            }
+        </style>
+        <script>
+            window._bd_share_config = {
+                common : {
+                    bdText : '自定义分享内容',
+                    bdDesc : '自定义分享摘要',
+                    bdUrl : '自定义分享url地址',
+                    bdPic : '自定义分享图片'
+                },
+                share : [{
+                    "bdSize" : 16
+                }],
+                slide : [{
+                    bdImg : 0,
+                    bdPos : "right",
+                    bdTop : 100
+                }],
+                image : [{
+                    viewType : 'list',
+                    viewPos : 'top',
+                    viewColor : 'black',
+                    viewSize : '16',
+                    viewList : ['qzone','tsina','huaban','tqq','renren']
+                }],
+                selectShare : [{
+                    "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+                }]
+            }
+            with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="wrap">
+                {% include 'header.html' %}
+                <div class="outer">
+                    {% block left %}{% endblock %}
+                    {% include 'right.html' %}
+                </div>
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </body>
+</html>
